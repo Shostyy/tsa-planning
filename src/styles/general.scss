@@ -1,9 +1,15 @@
 @import 'reset-css';
 @import 'mixins';
 
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     font-family: 'Montserrat', Arial, sans-serif;
-    //overflow: hidden;
+    overflow: hidden;
 
     &:after {
         content: "";
@@ -51,3 +57,8 @@ body:has(.left-sidebar__link--open--rotated) {
     }
 }
 
+:root {
+    iframe#webpack-dev-server-client-overlay {
+         display: none !important
+    }
+}

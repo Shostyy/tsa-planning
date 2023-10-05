@@ -1,36 +1,34 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { MaterialReactTable } from 'material-react-table';
 import "./Filter.scss";
 import staticData from "../staticData.json";
-
+import { MRT_Localization_UK } from 'material-react-table/locales/uk';
 
 export const Filter = () => {
   const columns = useMemo(
     () => [
-        {
-          accessorKey: "id",
-          header: "ID Транзакції",
-        },
-        {
-          accessorKey: "date",
-          header: "Дата транзакції",
-          
-        },
-        {
-          accessorKey: "name",
-          header: "Ім'я",
-          
-        },
-        {
-          accessorKey: "amount",
-          header: "Вартість",
-          
-        },
-        {
-          accessorKey: "time",
-          header: "Час транзакції",
-        },
-      ],
+      {
+        accessorKey: "id",
+        header: "ID Транзакції",
+      },
+      {
+        accessorKey: "date",
+        header: "Дата транзакції",
+      },
+      {
+        accessorKey: "name",
+        header: "Ім'я",
+      },
+      {
+        accessorKey: "amount",
+        header: "Вартість",
+        filterVariant: "range",
+      },
+      {
+        accessorKey: "time",
+        header: "Час транзакції",
+      },
+    ],
     [],
   );
 
@@ -42,37 +40,51 @@ export const Filter = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      setData(staticData);
+      const formattedData = staticData.map(row => {
+        const dateObject = new Date(row.date * 1000);
+
+        return {
+          ...row,
+          date: `${dateObject.getDate().toString().padStart(2, '0')}-${(dateObject.getMonth() + 1).toString().padStart(2, '0')}-${dateObject.getFullYear()}`,
+          time: `${dateObject.getHours().toString().padStart(2, '0')}:${dateObject.getMinutes().toString().padStart(2, '0')}`
+
+        }
+      });
+
+      setData(formattedData);
       setIsLoading(false);
     }
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     try {
       rowVirtualizerInstanceRef.current?.scrollToIndex?.(0);
     } catch (error) {
       console.error(error);
     }
-  }, [sorting]);
+  }, []);
 
   return (
     <div className="table-container">
-      <h2 className="table-container__header">Фільтри</h2>
-        <MaterialReactTable
+      {<h2 className="table-container__header">Фільтри</h2>}
+      <MaterialReactTable
         columns={columns}
         data={data}
         enableBottomToolbar={false}
         enableGlobalFilterModes
         enablePagination={false}
+        enableFacetedValues={false}
         enableRowNumbers
         enableRowVirtualization
-        muiTableContainerProps={{ sx: { maxHeight: '1000px' } }}
+        muiTableContainerProps={{ sx: { maxHeight: `72vh` } }}
         onSortingChange={setSorting}
         state={{ isLoading, sorting }}
         rowVirtualizerInstanceRef={rowVirtualizerInstanceRef}
         rowVirtualizerProps={{ overscan: 8 }}
-        />
-      
+        localization={MRT_Localization_UK}
+      />
     </div>
   );
 };
+
+export default Filter;

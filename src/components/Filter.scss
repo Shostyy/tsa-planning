@@ -1,10 +1,19 @@
 @import '../styles/modules';
 
 .table-container {
+    max-height: 300px !important;
     width: 100%;
     font-size: 18px;
     font-weight: 500;
-    overflow: scroll;
+    margin-bottom: 50px;
+
+    &__header {
+        font-size: 26px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
 }
 
 table {
@@ -20,17 +29,6 @@ table {
         width: auto;
         display: inline-block;
         padding-top: 20px;
-    }
-}
-
-.table-container {
-
-    &__header {
-        font-size: 26px;
-        font-weight: 700;
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 20px;
     }
 }
 

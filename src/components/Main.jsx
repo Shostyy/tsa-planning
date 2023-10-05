@@ -17,10 +17,10 @@ const LeftSidebar = () => {
           <a href={isOpen ? '#' : '#left-sidebar'} className={isOpen ? 'left-sidebar__link left-sidebar__link--open  left-sidebar__link--open--rotated' : 'left-sidebar__link left-sidebar__link--open'}onClick={toggleSidebar}><span>Закрити</span></a>
         </li>
         <li className="left-sidebar__item">
-          <Link to="/filter" className="left-sidebar__link left-sidebar__link--filter"  onClick={toggleSidebar}><span>Фільтри</span></Link>
+          <Link to="/filter" className="left-sidebar__link left-sidebar__link--filter"><span>Фільтри</span></Link>
         </li>
         <li className="left-sidebar__item">
-          <Link to="/chart" className="left-sidebar__link left-sidebar__link--chart">
+          <Link to="/chart" className="left-sidebar__link left-sidebar__link--chart"  onClick={toggleSidebar}>
             <span className="graph">Діаграми&nbsp;&nbsp;&#8595;</span>
             <ul className="dropdown-list">
               <li><Link to="/chart1" onClick={toggleSidebar}>Line</Link></li>

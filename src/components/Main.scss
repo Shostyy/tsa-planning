@@ -245,15 +245,10 @@
     box-sizing: border-box;
     width: 100%;
     padding: 20px;
-    padding-bottom: 0;
     
     height: calc(100vh - 50px - 59px);
         
     @include onTablet {
         height: calc(100vh - 74px - 50px);
-    }
-
-    @include onDesktop-s {
-        overflow: scroll;
     }
 }
