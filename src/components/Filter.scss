@@ -1,0 +1,41 @@
+@import '../styles/modules';
+
+.table-container {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    overflow: scroll;
+}
+
+table {
+    width: 100%;
+}
+
+.filter-column {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include onDesktop-s {
+        width: auto;
+        display: inline-block;
+        padding-top: 20px;
+    }
+}
+
+.table-container {
+
+    &__header {
+        font-size: 26px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+}
+
+.visibility {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,53 @@
+@import 'reset-css';
+@import 'mixins';
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    //overflow: hidden;
+
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: #838383;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.3s;
+        opacity: 0;
+    }
+}
+
+body:has(.login-pop-up:target) {
+    &:after {
+        opacity: 0.6;
+        z-index: 1;
+    }
+}
+
+body:has(.left-sidebar:target) {
+    .close_sidebar {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .open_sidebar {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+}
+
+body:has(.graph:hover) {
+    .dropdown-list {
+        left: 100px;
+        opacity: 1;
+    }
+}
+
+body:has(.left-sidebar__link--open--rotated) {
+    .left-sidebar__link--open:before {
+        transform: rotateZ(180deg);
+    }
+}
+
