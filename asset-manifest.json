@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tsa-planning/static/css/main.e5f15a2d.css",
-    "main.js": "/tsa-planning/static/js/main.c74ec38e.js",
+    "main.js": "/tsa-planning/static/js/main.7764c6bc.js",
     "static/media/logotype.gif": "/tsa-planning/static/media/logotype.8b39369cb4b374dee1cb.gif",
     "static/media/filter.svg": "/tsa-planning/static/media/filter.d720fd92b5721fa4fcad.svg",
     "static/media/close-black.svg": "/tsa-planning/static/media/close-black.c39ccb73e95d4c6da2e8.svg",
@@ -11,10 +11,10 @@
     "static/media/closeCircle.svg": "/tsa-planning/static/media/closeCircle.dd3c05401f531e5a8b1b.svg",
     "static/media/operArrow.svg": "/tsa-planning/static/media/operArrow.93baa53e1754c3d0d508.svg",
     "main.e5f15a2d.css.map": "/tsa-planning/static/css/main.e5f15a2d.css.map",
-    "main.c74ec38e.js.map": "/tsa-planning/static/js/main.c74ec38e.js.map"
+    "main.7764c6bc.js.map": "/tsa-planning/static/js/main.7764c6bc.js.map"
   },
   "entrypoints": [
     "static/css/main.e5f15a2d.css",
-    "static/js/main.c74ec38e.js"
+    "static/js/main.7764c6bc.js"
   ]
 }
