@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useAuth } from './AuthContext';
-import { SidebarProvider, useSidebar } from "./SidebarProvider";
+import { useAuth } from '../contexts/AuthContext';
+import { SidebarProvider, useSidebar } from "../contexts/SidebarProvider";
 import './Header.scss';
 
 

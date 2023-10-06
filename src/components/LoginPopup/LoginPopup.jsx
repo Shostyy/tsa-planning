@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useAuth } from './AuthContext'; // Import the useAuth hook
+import { useAuth } from '../contexts/AuthContext'; 
 import './LoginPopup.scss';
 
 export const LoginPopup = () => {
@@ -13,15 +13,15 @@ export const LoginPopup = () => {
         if (login) {
             closePopup();
         }
-    }, [login]); // Replace with the actual condition for successful authentication
+    }, [login]); 
     
 
     const handleLogin = () => {
-        login(); // Call the login function when the user submits the login form
+        login(); 
     };
 
     const handleLogout = () => {
-        logout(); // Call the logout function when the user clicks the logout button
+        logout();
     };
 
     return (

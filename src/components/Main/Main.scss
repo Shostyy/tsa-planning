@@ -1,4 +1,4 @@
-@import '../styles/modules';
+@import '../../styles/modules';
 
 .main {
     display: flex;
@@ -162,12 +162,12 @@
         }
 
         &--filter:before {
-            background-image: url("../../public/images/filter.svg");
+            background-image: url("../../../public/images/filter.svg");
         }
 
         &--chart:before {
             
-            background-image: url("../../public/images/chartLine.svg");
+            background-image: url("../../../public/images/chartLine.svg");
         }
 
         
@@ -186,20 +186,14 @@
         }
 
         &--open:before {
-            width: 0;
-            height: 0;
 
-            background-image: url("../../public/images/operArrow.svg");
+            background-image: url("../../../public/images/operArrow.svg");
             transition-duration: 0.3s;
 
             @include onDesktop-s {
                 width: 50px;
                 height: 50px;
                 display: block;
-
-                &:target {
-                    transform: rotateZ(180deg);
-                }
             }
         }
     }
@@ -225,6 +219,7 @@
 
   .dropdown-list li {
     transition: 0.3s;
+    margin-bottom: -10px;
 
     &:hover {
         box-shadow: 0px 12px 8px -15px #fff;  
@@ -252,3 +247,9 @@
         height: calc(100vh - 74px - 50px);
     }
 }
+
+.dropdown-list.open {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+  }

@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { MaterialReactTable } from 'material-react-table';
 import "./Filter.scss";
-import staticData from "../staticData.json";
+import staticData from "../../staticData.json";
 import { MRT_Localization_UK } from 'material-react-table/locales/uk';
 
 export const Filter = () => {

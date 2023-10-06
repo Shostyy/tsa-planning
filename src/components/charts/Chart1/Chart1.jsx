@@ -99,12 +99,8 @@ export class Chart1 extends React.Component {
     const sum = data.reduce((total, value) => total + value, 0);
     const average = (sum / data.length).toFixed(2);
 
-    return data.map(() => Number(average)); // Convert average to number
+    return data.map(() => Number(average));
   }
-
-  handleZoom = (chartContext, { xaxis, yaxis }) => {
-    // Handle zoom event here (optional)
-  };
 
   handleResetScope = () => {
     if (this.chartRef.current) {
@@ -132,6 +128,3 @@ export class Chart1 extends React.Component {
     );
   }
 }
-
-const domContainer = document.querySelector("#root");
-ReactDOM.render(<Chart1 />, domContainer);

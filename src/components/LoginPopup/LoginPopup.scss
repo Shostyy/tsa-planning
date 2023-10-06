@@ -1,4 +1,4 @@
-@import '../styles/modules';
+@import '../../styles/modules';
 
 .login-pop-up {
     box-sizing: border-box;
@@ -79,7 +79,7 @@
         position: absolute;
         right: 18px;
         top: 18px;
-        background-image: url("../../public/images/closeCircle.svg");
+        background-image: url("../../../public/images/closeCircle.svg");
         background-size: contain;
 
         @include hover-scale-1-1;
