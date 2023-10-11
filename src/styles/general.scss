@@ -25,17 +25,17 @@ body {
     }
 }
 
-body:has(.login-pop-up:target) {
-    &:after {
-        opacity: 0.6;
-        z-index: 1;
-    }
-}
-
 body:has(.graph:hover) {
     .dropdown-list {
         left: 100px;
         opacity: 1;
+    }
+}
+
+body:has(#login-form:target) {
+    .login-pop-up__backgroud {
+        opacity: 0.4;
+        pointer-events: all;
     }
 }
 

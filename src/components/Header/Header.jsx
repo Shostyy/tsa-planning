@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from '../contexts/AuthContext';
+import { Link } from 'react-router-dom';
 import { SidebarProvider, useSidebar } from "../contexts/SidebarProvider";
 import './Header.scss';
 
@@ -21,8 +22,7 @@ export const Header = () => {
             <nav className="nav">
                 <ul className="nav__list">
                     <li className="nav__item">
-                        <a href="#" className="nav__link nav__link--logo">
-                        </a>
+                        <Link to="/" className="nav__link nav__link--logo"></Link>
                     </li>
                     <li className="nav__item">
                         {isLoggedIn ? (

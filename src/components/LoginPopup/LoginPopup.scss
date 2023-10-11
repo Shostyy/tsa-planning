@@ -135,6 +135,7 @@
         background-color: #e0e0e0;
         transition: 0.3s;
         padding-inline: 15px;
+        width: calc(100% - 30px);
         font-family: 'Montserrat', Arial, sans-serif;
         font-size: 20px;
 
@@ -185,5 +186,43 @@
         @include onDesktop-s {
             font-size: 15px;
         }
+    }
+
+    &__backgroud {
+        transition: 0.3s;
+        opacity: 0;
+        z-index: 2;
+        pointer-events: none;
+        position: absolute;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        background-color: #000;
+    }
+}
+
+.password-input-container {
+    position: relative;
+    display: flex;
+}
+.toggle-password-button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    
+
+    img {
+        position: absolute;
+        top: 0;
+        left: -5px;
+        width: 20px;
+        height: 20px;
     }
 }

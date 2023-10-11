@@ -9,10 +9,6 @@ export const SidebarProvider = ({ children }) => {
     setIsOpen(!isOpen);
   };
 
-  const closeSidebar = () => {
-    setIsOpen(false);
-  };
-
   return (
     <SidebarContext.Provider value={{ isOpen, toggleSidebar }}>
       {children}

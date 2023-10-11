@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Filter } from "../Filter/Filter";
 import { SidebarProvider, useSidebar } from "../contexts/SidebarProvider";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ReactTypingEffect from 'react-typing-effect';
 import "./Main.scss";
 
 import { Chart1 } from "../charts/Chart1/Chart1";
@@ -13,9 +14,11 @@ import { LineLabels } from "../charts/LineLabels/LineLabels";
 import { BarChart } from "../charts/BarChart/BarChart";
 import { BarMultiple } from "../charts/BarMultiple/BarMultiple";
 import { BarStacked } from "../charts/BarCtacked/BarCtacked";
+import { WelcomeComponents } from "../../WelcomeComponents/WelcomeComponents";
+import { RefreshPassword } from "../RefreshPassword/RefreshPassword";
 
 const LeftSidebar = () => {
-  const { isOpen, toggleSidebar, closeSidebar } = useSidebar();
+  const { isOpen, toggleSidebar} = useSidebar();
   return (
     <nav className={isOpen ? 'left-sidebar left-sidebar--opened' : 'left-sidebar'}>
       <ul className="left-sidebar__list">
@@ -62,11 +65,10 @@ export const Main = () => {
           </Routes>
         </div>
       ) : (
-        <h1 className="main__header">
-          Вітаємо в проекті
-          <br></br>
-          “Планування”
-        </h1>
+        <Routes>
+            <Route path="/" element={<WelcomeComponents />} />
+            <Route path="/refreshPassword" element={<RefreshPassword />} />
+        </Routes>
       )}
     </main>
   );
