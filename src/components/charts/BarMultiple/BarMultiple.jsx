@@ -1,5 +1,6 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
+import "../chartStyles/chartStyles.scss"
 
 export class BarMultiple extends React.Component {
   constructor(props) {
@@ -38,8 +39,7 @@ export class BarMultiple extends React.Component {
             options={this.state.options}
             series={this.state.series}
             type="bar"
-            height={600}
-            width={1000}
+            height={'100%'}
           />
         </div>
       </div>

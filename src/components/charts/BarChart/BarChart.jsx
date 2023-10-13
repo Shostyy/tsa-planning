@@ -1,6 +1,6 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
-import "./BarChart.scss"
+import "../chartStyles/chartStyles.scss"
 
 export class BarChart extends React.Component {
   constructor(props) {
@@ -33,8 +33,7 @@ export class BarChart extends React.Component {
             options={this.state.options}
             series={this.state.series}
             type="bar"
-            height={600}
-            width={1000}
+            height={'100%'}
           />
         </div>
       </div>

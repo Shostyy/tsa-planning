@@ -3,8 +3,8 @@ import { useAuth } from '../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import './LoginPopup.scss';
 
-import hideIcon from "../../icons/hide-pass.svg";
-import showIcon from "../../icons/show-pass.svg";
+import showIcon from "../../icons/hide-pass.svg";
+import hideIcon from "../../icons/show-pass.svg";
 
 export const LoginPopup = () => {
     const { login, logout } = useAuth();

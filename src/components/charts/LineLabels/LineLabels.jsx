@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ReactApexChart from "react-apexcharts";
-import "./LineLabels.scss";
+import "../chartStyles/chartStyles.scss";
 
 export class LineLabels extends React.Component {
   constructor(props) {
@@ -69,6 +69,11 @@ export class LineLabels extends React.Component {
     };
   }
 
+  handleResetScope = () => {
+    if (this.chartRef.current) {
+      this.chartRef.current.chart.zoomX(0, 1);
+    }
+  };
 
   render() {
     return (
@@ -78,8 +83,7 @@ export class LineLabels extends React.Component {
             options={this.state.options}
             series={this.state.series}
             type="line"
-            height={600}
-            width={1000}
+            height={'100%'}
             ref={this.chartRef}
             events={{
               zoomed: this.handleZoom

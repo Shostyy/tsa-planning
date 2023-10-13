@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ReactApexChart from "react-apexcharts";
-import "./PieChart.scss";
+import "../chartStyles/chartStyles.scss";
 
 export class PieChart extends React.Component {
   constructor(props) {
@@ -32,8 +32,7 @@ export class PieChart extends React.Component {
             options={this.state.options}
             series={this.state.series}
             type="pie"
-            height={600}
-            width={1000}
+            height={'100%'}
             ref={this.chartRef}
             events={{
               zoomed: this.handleZoom

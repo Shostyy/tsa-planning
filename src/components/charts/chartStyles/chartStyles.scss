@@ -1,0 +1,29 @@
+@import '../../../styles/modules';
+
+.chart-container {
+    width: 100%;
+    height: 100%;
+}
+
+
+#chart {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    button {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        border: none;
+        background-color: #686868;
+        color: #fff;
+        padding: 7px 10px;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 600;
+
+        &:hover {
+            @include hover-scale-1-05
+        }
+    }
+}

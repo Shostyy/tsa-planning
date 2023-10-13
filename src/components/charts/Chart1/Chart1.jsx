@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import ReactApexChart from "react-apexcharts";
-import "./Chart1.scss";
+import "../chartStyles/chartStyles.scss";
 
 export class Chart1 extends React.Component {
   constructor(props) {
@@ -116,7 +116,7 @@ export class Chart1 extends React.Component {
             options={this.state.options}
             series={this.state.series}
             type="line"
-            height={600}
+            height={'100%'}
             ref={this.chartRef}
             events={{
               zoomed: this.handleZoom

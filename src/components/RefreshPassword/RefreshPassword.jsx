@@ -18,11 +18,8 @@ export const RefreshPassword = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (newPassword === newPasswordRepeated) {
-            // Passwords match
-            // Proceed with your logic (e.g., send to server)
             setPasswordsMatch(true);
         } else {
-            // Passwords don't match
             setPasswordsMatch(false);
         }
     }
