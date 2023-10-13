@@ -16,6 +16,7 @@ import { BarMultiple } from "../charts/BarMultiple/BarMultiple";
 import { BarStacked } from "../charts/BarCtacked/BarCtacked";
 import { WelcomeComponents } from "../../WelcomeComponents/WelcomeComponents";
 import { RefreshPassword } from "../RefreshPassword/RefreshPassword";
+import { Map } from "../Map/Map";
 
 const LeftSidebar = () => {
   const { isOpen, toggleSidebar} = useSidebar();
@@ -29,7 +30,10 @@ const LeftSidebar = () => {
           <Link to="/filter" className="left-sidebar__link left-sidebar__link--filter" onClick={toggleSidebar}><span>Фільтри</span></Link>
         </li>
         <li className="left-sidebar__item">
-          <Link className="left-sidebar__link left-sidebar__link--chart" onClick={toggleSidebar}>
+          <Link to="/map" className="left-sidebar__link left-sidebar__link--map" onClick={toggleSidebar}><span>Карта</span></Link>
+        </li>
+        <li className="left-sidebar__item">
+          <Link className="left-sidebar__link left-sidebar__link--chart">
             <span className="graph">Діаграми&nbsp;&nbsp;&#8595;</span>
             <ul className="dropdown-list">
               <li><Link to="/chart1" onClick={toggleSidebar}>Продажі</Link></li>
@@ -62,6 +66,7 @@ export const Main = () => {
             <Route path="/barChart" element={<BarChart />} />
             <Route path="/barMultiple" element={<BarMultiple />} />
             <Route path="/barStacked" element={<BarStacked />} />
+            <Route path="/map" element={<Map />} />
           </Routes>
         </div>
       ) : (

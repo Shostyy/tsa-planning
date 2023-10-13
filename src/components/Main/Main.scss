@@ -166,10 +166,12 @@
         }
 
         &--chart:before {
-            
             background-image: url("../../../public/images/chartLine.svg");
         }
 
+        &--map:before {
+            background-image: url("../../../public/images/menu-map.svg");
+        }
         
         
         &--open:after {
