@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/tsa-planning/static/css/main.3076bc73.css",
-    "main.js": "/tsa-planning/static/js/main.d44733ab.js",
+    "main.css": "/tsa-planning/static/css/main.f4b0b36b.css",
+    "main.js": "/tsa-planning/static/js/main.d468b939.js",
     "static/media/logotype.gif": "/tsa-planning/static/media/logotype.8b39369cb4b374dee1cb.gif",
     "static/media/filter.svg": "/tsa-planning/static/media/filter.d720fd92b5721fa4fcad.svg",
     "static/media/close-black.svg": "/tsa-planning/static/media/close-black.c39ccb73e95d4c6da2e8.svg",
     "static/media/hide-pass.svg": "/tsa-planning/static/media/hide-pass.b0908e22a02f4d6e2db2a99a587cc31e.svg",
     "static/media/show-pass.svg": "/tsa-planning/static/media/show-pass.e8983346820bbc2537b258db440c092c.svg",
     "static/media/chartLine.svg": "/tsa-planning/static/media/chartLine.a50d71b4af9bc9ec19e5.svg",
+    "static/media/menu-map.svg": "/tsa-planning/static/media/menu-map.1910105033b491789605.svg",
     "index.html": "/tsa-planning/index.html",
     "static/media/menu-open.svg": "/tsa-planning/static/media/menu-open.74e8cff8ab28cd26daae.svg",
     "static/media/closeCircle.svg": "/tsa-planning/static/media/closeCircle.dd3c05401f531e5a8b1b.svg",
     "static/media/operArrow.svg": "/tsa-planning/static/media/operArrow.93baa53e1754c3d0d508.svg",
-    "main.3076bc73.css.map": "/tsa-planning/static/css/main.3076bc73.css.map",
-    "main.d44733ab.js.map": "/tsa-planning/static/js/main.d44733ab.js.map"
+    "main.f4b0b36b.css.map": "/tsa-planning/static/css/main.f4b0b36b.css.map",
+    "main.d468b939.js.map": "/tsa-planning/static/js/main.d468b939.js.map"
   },
   "entrypoints": [
-    "static/css/main.3076bc73.css",
-    "static/js/main.d44733ab.js"
+    "static/css/main.f4b0b36b.css",
+    "static/js/main.d468b939.js"
   ]
 }
